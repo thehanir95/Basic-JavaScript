@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var vehiclename = 'toyota';
+        
+        function printvehiclename1(){
+            console.log(this.vehiclename);
+        }
+
+        printvehiclename1(); /* toyota */
+/*
+
+        var vehicle={
+            vehiclename: 'nissan',
+            printvehiclename2: printvehiclename1
+        };
+
+        vehicle.printvehiclename2(); /* nissan */
+
+
+        var vehicle={
+            vehiclename:'alto',
+            printvehiclename3: function(){
+                return function(){
+                    console.log(this.vehiclename);
+                }
+            }
+
+        };
+
+
+        var execute = vehicle.printvehiclename3();
+        execute(); /* toyota */
+
+
+        execute.call(vehicle); /*alto */
+
+
+        var execute1= vehicle.printvehiclename3().bind(vehicle);
+        execute1(); /* alto */
+
+    </script>
+
+
+
+</body>
+</html>
